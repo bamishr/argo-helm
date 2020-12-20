@@ -103,6 +103,10 @@ rules:
   - {{ .Values.controller.persistence.mysql.userNameSecret.name }}
   - {{ .Values.controller.persistence.mysql.passwordSecret.name }}
   {{- end}}
+   {{- if .Values.controller.persistence.mysql }}
+  - {{ .Values.controller.persistence.mysql.userNameSecret.name }}
+  - {{ .Values.controller.persistence.mysql.passwordSecret.name }}
+  {{- end}}
   verbs:
   - get
 {{- end}}
