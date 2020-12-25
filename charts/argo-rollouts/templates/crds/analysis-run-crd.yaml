@@ -2801,6 +2801,19 @@ spec:
                   successful:
                     format: int32
                     type: integer
+                     required:
+                      - phase
+                      type: object
+                    type: array
+                  message:
+                    type: string
+                  name:
+                    type: string
+                  phase:
+                    type: string
+                  successful:
+                    format: int32
+                    type: integer
                 required:
                 - name
                 - phase
